@@ -36,7 +36,7 @@ quickcheck = { version = "1.0", default-features = false }
 [features]
 ## The default backend using pure Rust implementation via miniz_oxide.
 ## This provides a safe, portable compression implementation without requiring a C compiler.
-default = ["rust_backend", "runtime_detection"]
+default = ["zlib"]
 
 ## Allows runtime feature detection on supported CPU architectures.
 runtime_detection = ["zlib-rs?/std", "crc32fast?/std"]
