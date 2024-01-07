@@ -427,6 +427,10 @@ impl Decompress {
         }
     }
 
+    #[cfg(feature = "any_zlib")]
+    pub fn get_raw(&mut self) -> &mut ffi::mz_stream{
+        unsafe { self.inner.inner.stream_wrapper.inner.as_mut().unwrap() }
+    }
     /// Creates a new object ready for decompressing data that it's given.
     ///
     /// The Decompress object produced by this constructor expects gzip headers
