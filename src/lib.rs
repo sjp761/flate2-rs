@@ -191,7 +191,7 @@ pub mod bufread {
 
 /// Raw C struct from libz.
 pub mod raw {
-    pub use crate::ffi::mz_stream;
+    pub use crate::ffi::*;
 }
 
 fn _assert_send_sync() {
